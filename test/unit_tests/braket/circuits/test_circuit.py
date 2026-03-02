@@ -1175,7 +1175,7 @@ def test_subroutine_nested():
     @circuit.subroutine()
     def h_nested(target):
         for qubit in target:
-            yield h(target)
+            yield h([qubit])
 
     circ = Circuit().add(h_nested, [0, 1])
     expected = Circuit([Instruction(gates.H(), j) for i in range(2) for j in range(2)])
