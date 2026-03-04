@@ -142,9 +142,9 @@ def test_pulse_sequence_make_bound_pulse_sequence(predefined_frame_1, predefined
         "    waveform drag_gauss_wf = drag_gaussian(length_dg * 1s, sigma_dg * 1s, 0.2, 1, false);",
         "    waveform constant_wf = constant(length_c * 1s, 2.0 + 0.3im);",
         "    waveform arb_wf = {1.0 + 0.4im, 0, 0.3, 0.1 + 0.2im};",
-        "    waveform erf_square_wf = erf_square(length_es * 1s, width_es * 1s, 2.0ns,"
-        " 8.0ns, 1, false);",
+        "    waveform erf_square_wf = erf_square(length_es * 1s, width_es * 1s, 2.0ns, 8.0ns, 1, false);",
         "    set_frequency(predefined_frame_1, a + 2.0 * c);",
+        "    shift_frequency(predefined_frame_1, a + 2.0 * c);",
         "    shift_frequency(predefined_frame_1, a + 2.0 * c);",
         "    set_phase(predefined_frame_1, a + 2.0 * c);",
         "    shift_phase(predefined_frame_1, -1.0 * a + -2.0 * c);",
