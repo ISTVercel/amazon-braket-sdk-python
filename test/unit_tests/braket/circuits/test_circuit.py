@@ -2182,9 +2182,7 @@ def test_circuit_user_gate(pulse_sequence_2):
                     "OPENQASM 3.0;",
                     "bit[1] b;",
                     "qubit[1] q;",
-                    "#pragma braket noise "
-                    "kraus([[0.9486833im, 0], [0, 0.9486833im]], [[0, 0.31622777], "
-                    "[0.31622777, 0]]) q[0]",
+                    "#pragma braket noise kraus([[0.9486833im, 0], [0, 0.9486833im]], [[0, 0.31622777], [0.31622777, 0]]) q[0]",
                     "b[0] = measure q[0];",
                 ]),
                 inputs={},
